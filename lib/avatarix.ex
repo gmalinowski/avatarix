@@ -1,18 +1,11 @@
 defmodule Avatarix do
-  @moduledoc """
-  Documentation for `Avatarix`.
-  """
+  def main(input) do
+    input
+    |> hash_input
+  end
 
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Avatarix.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def hash_input(input) do
+    :crypto.hash(:md5, input)
+    |> :binary.bin_to_list
   end
 end
