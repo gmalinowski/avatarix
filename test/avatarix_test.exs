@@ -12,4 +12,5 @@ defmodule AvatarixTest do
     |> Enum.all?(fn num -> is_number(num) end)
     |> assert
   end
+
 end
